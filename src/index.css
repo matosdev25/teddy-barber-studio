@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, Montserrat, ui-sans-serif, system-ui, sans-serif;
+  background: #050505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #050505;
+  scroll-padding-top: 7.5rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(245, 160, 0, 0.08), transparent 26%),
+    #050505;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section[id] {
+  scroll-margin-top: 7.5rem;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .eyebrow {
+    @apply text-xs font-black uppercase tracking-[0.42em] text-gold;
+  }
+
+  .section-title {
+    @apply mt-4 text-4xl font-black leading-[1.05] text-soft md:text-6xl;
+  }
+
+  .section-copy {
+    @apply mx-auto mt-4 max-w-2xl text-base leading-7 text-muted md:text-lg;
+  }
+
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border px-6 py-3 text-sm font-extrabold transition duration-300 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:ring-offset-2 focus:ring-offset-ink;
+  }
+
+  .btn-primary {
+    @apply border-gold bg-gold text-black shadow-glow hover:-translate-y-0.5 hover:bg-champagne;
+  }
+
+  .btn-secondary {
+    @apply border-white/15 bg-white/5 text-soft hover:-translate-y-0.5 hover:border-gold/50 hover:bg-gold/10 hover:text-champagne;
+  }
+
+  .btn-dark {
+    @apply border-black bg-black text-soft hover:-translate-y-0.5 hover:bg-charcoal;
+  }
+
+  .premium-card {
+    @apply rounded-[1.35rem] border border-gold/20 bg-[linear-gradient(180deg,rgba(28,28,28,0.92),rgba(12,12,12,0.96))] shadow-card transition duration-300;
+  }
+
+  .premium-card-hover {
+    @apply hover:-translate-y-1 hover:border-gold/55 hover:shadow-glow;
+  }
+
+  .gold-card {
+    @apply premium-card relative;
+  }
+
+  .gold-card::before {
+    content: "";
+    position: absolute;
+    inset: auto 16% -1px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f5a000, #ffd37a, #f5a000, transparent);
+    filter: blur(0.4px);
+    opacity: 0.9;
+  }
+
+  .gold-card::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: -32px;
+    height: 58px;
+    background: rgba(245, 160, 0, 0.24);
+    filter: blur(26px);
+    pointer-events: none;
+  }
+
+  .section-bg {
+    @apply relative overflow-hidden;
+  }
+
+  .section-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(245, 160, 0, 0.12), transparent 30%),
+      linear-gradient(90deg, rgba(245, 160, 0, 0.06), transparent 18%, transparent 82%, rgba(245, 160, 0, 0.06));
+    pointer-events: none;
+  }
+
+  .gold-divider {
+    @apply mx-auto mt-8 h-px w-56 bg-gradient-to-r from-transparent via-gold to-transparent shadow-glow;
+  }
+
+  .icon-orb {
+    @apply grid h-16 w-16 place-items-center rounded-full border border-gold/60 bg-[radial-gradient(circle,rgba(245,160,0,0.18),rgba(10,10,10,0.96))] text-gold shadow-glow;
+  }
+}
