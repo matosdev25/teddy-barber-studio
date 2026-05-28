@@ -125,3 +125,17 @@ Número:
 
 ```txt
 50768475071
+```
+
+## Logo en navbar
+
+El logo del navbar debe verse completo y proporcional.
+
+Reglas:
+
+- No cambiar la altura del navbar para ajustar el logo.
+- No deformar el logo.
+- Usar `object-contain`.
+- Evitar `overflow-hidden` en el wrapper del logo si lo corta.
+- No usar `object-cover` para el logo.
+- Ajustar `h`, `max-h`, `max-w` del logo internamente sin modificar el tamaño general del header.

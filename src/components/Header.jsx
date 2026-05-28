@@ -18,9 +18,9 @@ function Header({ bookingLink }) {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4">
       <div className="container-shell">
         <div className="flex h-20 items-center justify-between gap-4 rounded-[1.25rem] border border-gold/25 bg-ink/88 px-4 shadow-card backdrop-blur-md md:px-6">
-          <a href="#barberos" className="flex shrink-0 items-center" aria-label="Teddy Barber Studio">
+          <a href="#barberos" className="flex shrink-0 items-center overflow-visible" aria-label="Teddy Barber Studio">
             <img
-              className="h-12 w-auto max-w-[8.5rem] object-contain sm:h-14 sm:max-w-[10rem] lg:h-16"
+              className="block h-16 w-auto max-w-[150px] object-contain md:h-[4.25rem] md:max-w-[180px] lg:h-[4.5rem]"
               src={LOGO_SRC}
               alt="Teddy Barber Studio"
             />
