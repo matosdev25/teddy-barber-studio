@@ -91,3 +91,28 @@ Las imágenes originales pueden estar en:
 ```txt
 /ref
 ```
+## Orden actual de secciones
+
+El cliente pidió que lo primero visible al entrar a la página sean los barberos.
+
+Orden obligatorio:
+
+1. Header
+2. Barberos
+3. Hero
+4. Membresías
+5. Beneficios
+6. Servicios
+7. Galería / Experiencia Teddy
+8. Ubicación y horario
+9. CTA final
+10. Footer
+
+Reglas:
+
+- `Barbers` no debe estar lazy-loaded porque es la primera sección visible.
+- `Barbers` debe tener `id="barberos"`.
+- El link `Inicio` puede apuntar a `#barberos`.
+- El link `Barberos` debe apuntar a `#barberos`.
+- La sección no debe quedar tapada por el header sticky.
+- Mantener suficiente `padding-top` y `scroll-mt`.

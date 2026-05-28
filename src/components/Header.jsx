@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { LOGO_SRC } from "../data/brand.js";
 
 const navLinks = [
-  { label: "Inicio", href: "#inicio" },
+  { label: "Inicio", href: "#barberos" },
+  { label: "Barberos", href: "#barberos" },
   { label: "Membresías", href: "#membresias" },
   { label: "Servicios", href: "#servicios" },
-  { label: "Barberos", href: "#barberos" },
   { label: "Galería", href: "#galeria" },
   { label: "Ubicación", href: "#ubicacion" },
 ];
@@ -18,7 +18,7 @@ function Header({ bookingLink }) {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4">
       <div className="container-shell">
         <div className="flex h-20 items-center justify-between gap-4 rounded-[1.25rem] border border-gold/25 bg-ink/88 px-4 shadow-card backdrop-blur-md md:px-6">
-          <a href="#inicio" className="flex shrink-0 items-center" aria-label="Teddy Barber Studio">
+          <a href="#barberos" className="flex shrink-0 items-center" aria-label="Teddy Barber Studio">
             <img
               className="h-12 w-auto max-w-[8.5rem] object-contain sm:h-14 sm:max-w-[10rem] lg:h-16"
               src={LOGO_SRC}
@@ -29,7 +29,7 @@ function Header({ bookingLink }) {
           <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 className="relative text-sm font-semibold text-soft/85 transition after:absolute after:-bottom-3 after:left-0 after:h-0.5 after:w-0 after:bg-gold after:transition-all hover:text-gold hover:after:w-full"
                 href={link.href}
               >
@@ -60,7 +60,7 @@ function Header({ bookingLink }) {
           <div className="container-shell flex flex-col gap-2 py-5">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 className="rounded-2xl px-3 py-3 text-sm font-bold text-muted hover:bg-white/5 hover:text-gold"
                 href={link.href}
                 onClick={() => setIsOpen(false)}

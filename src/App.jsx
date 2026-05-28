@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import Barbers from "./components/Barbers.jsx";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Memberships from "./components/Memberships.jsx";
@@ -6,7 +7,6 @@ import { BOOKING_WHATSAPP_LINK } from "./data/site.js";
 
 const Benefits = React.lazy(() => import("./components/Benefits.jsx"));
 const Services = React.lazy(() => import("./components/Services.jsx"));
-const Barbers = React.lazy(() => import("./components/Barbers.jsx"));
 const Gallery = React.lazy(() => import("./components/Gallery.jsx"));
 const Location = React.lazy(() => import("./components/Location.jsx"));
 const FinalCta = React.lazy(() => import("./components/FinalCta.jsx"));
@@ -25,6 +25,7 @@ function App() {
     <div className="min-h-screen bg-ink text-soft">
       <Header bookingLink={BOOKING_WHATSAPP_LINK} />
       <main>
+        <Barbers />
         <Hero bookingLink={BOOKING_WHATSAPP_LINK} />
         <Memberships />
         <LazySection>
@@ -32,9 +33,6 @@ function App() {
         </LazySection>
         <LazySection>
           <Services bookingLink={BOOKING_WHATSAPP_LINK} />
-        </LazySection>
-        <LazySection>
-          <Barbers />
         </LazySection>
         <LazySection>
           <Gallery />

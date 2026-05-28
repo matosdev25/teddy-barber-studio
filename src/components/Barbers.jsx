@@ -35,15 +35,18 @@ const BarberCard = React.memo(function BarberCard({ barber }) {
 
 function Barbers() {
   return (
-    <section id="barberos" className="section-padding section-bg bg-ink">
+    <section
+      id="barberos"
+      className="section-bg scroll-mt-28 bg-ink pb-20 pt-36 md:pb-32 md:pt-44"
+    >
       <div className="container-shell relative">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="eyebrow">EQUIPO</p>
+          <p className="eyebrow">NUESTROS BARBEROS</p>
           <h2 className="section-title">
-            Nuestros <span className="text-gold">Barberos</span>
+            Elige tu barbero <span className="text-gold">de confianza</span>
           </h2>
           <p className="section-copy">
-            Elige tu barbero de confianza y reserva tu cita directamente por WhatsApp.
+            Reserva tu cita directamente con Alberto, Fred o Daniel por WhatsApp.
           </p>
           <div className="gold-divider" />
         </div>
