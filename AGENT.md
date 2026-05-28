@@ -116,3 +116,12 @@ Reglas:
 - El link `Barberos` debe apuntar a `#barberos`.
 - La sección no debe quedar tapada por el header sticky.
 - Mantener suficiente `padding-top` y `scroll-mt`.
+
+## Servicios con WhatsApp
+
+Cada servicio debe abrir WhatsApp con mensaje personalizado.
+
+Número:
+
+```txt
+50768475071
