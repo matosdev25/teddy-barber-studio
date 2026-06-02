@@ -49,16 +49,12 @@ function Location({ bookingLink }) {
             <h3 className="mt-6 text-2xl font-black">Horario</h3>
             <div className="mt-7 divide-y divide-white/10">
               <div className="flex items-center justify-between gap-5 py-4">
-                <span className="font-semibold text-muted">Martes a Viernes</span>
+                <span className="font-semibold text-muted">Lunes a Viernes</span>
                 <span className="text-right font-black">9:00 AM – 7:30 PM</span>
               </div>
               <div className="flex items-center justify-between gap-5 py-4">
                 <span className="font-semibold text-muted">Sábado y Domingo</span>
                 <span className="text-right font-black">9:00 AM – 6:00 PM</span>
-              </div>
-              <div className="flex items-center justify-between gap-5 py-4">
-                <span className="font-semibold text-muted">Lunes</span>
-                <span className="font-black text-red-500">Cerrado</span>
               </div>
             </div>
           </article>

@@ -54,11 +54,9 @@ function Footer() {
               Horario
             </h3>
             <p className="mt-5 leading-7 text-muted">
-              Mar – Vie: 9:00 AM – 7:30 PM
+              Lun – Vie: 9:00 AM – 7:30 PM
               <br />
               Sáb – Dom: 9:00 AM – 6:00 PM
-              <br />
-              Lunes: <span className="font-black text-red-500">Cerrado</span>
             </p>
           </div>
         </div>
